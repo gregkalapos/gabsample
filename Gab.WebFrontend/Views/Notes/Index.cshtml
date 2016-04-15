@@ -1,0 +1,23 @@
+﻿@model List<Gab.WebFrontend.Models.Note>
+@{
+    ViewBag.Title = "Notes";
+}
+
+<h2>Notes</h2>
+
+<div>
+    @Html.ActionLink("Create new Note", "Create");
+  
+        @foreach (var note in Model)
+        {
+            <div>Title: @note.Title</div>
+            <div>Author: @note.Author</div>
+            <dic>City: @note.City</dic>
+            <div>
+                @note.Text
+            </div>
+
+            <br/>
+            <br/>
+        } 
+</div>

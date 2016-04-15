@@ -1,0 +1,27 @@
+﻿@model Gab.WebFrontend.Models.Note
+@{
+    ViewBag.Title = "Create Note";
+}
+
+<h2>Create Note</h2>
+
+<div>
+    @using (Html.BeginForm())
+    {
+        <div>
+            @Html.LabelFor(m => m.Author)
+            @Html.TextBoxFor(m => m.Author)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Title)
+            @Html.TextBoxFor(m => m.Title)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Text)
+            @Html.TextAreaFor(m => m.Text)
+        </div>
+        <div>
+            <input type="submit" value="Save" />
+        </div>
+    }
+</div>
